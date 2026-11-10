@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nueva tarea - TareaClara</title>
+  <meta name="description" content="TareaClara: agenda de tareas académicas sencilla y accesible.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header>
+    <p class="marca">TareaClara</p>
+    <nav aria-label="Principal">
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="agregar.html" aria-current="page">Nueva tarea</a></li>
+          <li><a href="tareas.html">Mis tareas</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="contenido">
+    <h1>Nueva tarea</h1>
+    <p>Los campos marcados con * son obligatorios.</p>
+    <form id="formulario" class="tarjeta" novalidate>
+      <div class="campo">
+        <label for="titulo">Título *</label>
+        <input type="text" id="titulo" name="titulo" aria-describedby="e-titulo" autocomplete="off">
+        <p class="error-msg" id="e-titulo"></p>
+      </div>
+      <div class="campo">
+        <label for="materia">Materia *</label>
+        <select id="materia" name="materia" aria-describedby="e-materia">
+          <option value="">Seleccione una materia</option>
+          <option>Desarrollo basado en plataformas</option>
+          <option>Bases de datos</option>
+          <option>Programación</option>
+          <option>Matemáticas</option>
+          <option>Otra</option>
+        </select>
+        <p class="error-msg" id="e-materia"></p>
+      </div>
+      <div class="campo">
+        <label for="fecha">Fecha de entrega *</label>
+        <input type="date" id="fecha" name="fecha" aria-describedby="e-fecha">
+        <p class="error-msg" id="e-fecha"></p>
+      </div>
+      <fieldset class="campo" aria-describedby="e-prioridad">
+        <legend>Prioridad *</legend>
+        <span class="opcion"><input type="radio" id="p-alta" name="prioridad" value="Alta"> <label for="p-alta">Alta</label></span>
+        <span class="opcion"><input type="radio" id="p-media" name="prioridad" value="Media"> <label for="p-media">Media</label></span>
+        <span class="opcion"><input type="radio" id="p-baja" name="prioridad" value="Baja"> <label for="p-baja">Baja</label></span>
+        <p class="error-msg" id="e-prioridad"></p>
+      </fieldset>
+      <div class="campo">
+        <label for="descripcion">Descripción (opcional)</label>
+        <textarea id="descripcion" name="descripcion" rows="4" aria-describedby="contador"></textarea>
+        <p class="contador" id="contador">0 de 200 caracteres</p>
+      </div>
+      <button type="submit" class="boton">Guardar tarea</button>
+      <p class="mensaje-ok" id="exito" role="status"></p>
+    </form>
+  </main>
+  <footer>
+    <p>Proyecto de medio ciclo - Desarrollo basado en plataformas - UTM</p>
+  </footer>
+  <script src="js/almacen.js"></script>
+  <script src="js/agregar.js"></script>
+</body>
+</html>

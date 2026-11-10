@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis tareas - TareaClara</title>
+  <meta name="description" content="TareaClara: agenda de tareas académicas sencilla y accesible.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header>
+    <p class="marca">TareaClara</p>
+    <nav aria-label="Principal">
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="agregar.html">Nueva tarea</a></li>
+          <li><a href="tareas.html" aria-current="page">Mis tareas</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="contenido">
+    <h1>Mis tareas</h1>
+    <div class="filtros">
+      <div>
+        <label for="buscar">Buscar por título</label>
+        <input type="search" id="buscar" autocomplete="off">
+      </div>
+      <div>
+        <label for="estado">Mostrar</label>
+        <select id="estado">
+          <option value="todas">Todas</option>
+          <option value="pendientes">Pendientes</option>
+          <option value="completadas">Completadas</option>
+        </select>
+      </div>
+    </div>
+    <p id="estado-lista" role="status"></p>
+    <ul class="lista-tareas" id="lista"></ul>
+  </main>
+  <footer>
+    <p>Proyecto de medio ciclo - Desarrollo basado en plataformas - UTM</p>
+  </footer>
+  <script src="js/almacen.js"></script>
+  <script src="js/tareas.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio - TareaClara</title>
+  <meta name="description" content="TareaClara: agenda de tareas académicas sencilla y accesible.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header>
+    <p class="marca">TareaClara</p>
+    <nav aria-label="Principal">
+      <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="agregar.html">Nueva tarea</a></li>
+          <li><a href="tareas.html">Mis tareas</a></li>
+          <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="contenido">
+    <h1>Organiza tus tareas académicas</h1>
+    <p>TareaClara te ayuda a registrar trabajos, deberes y exámenes, y a ver qué debes entregar primero.</p>
+    <section aria-labelledby="t-resumen">
+      <h2 id="t-resumen">Resumen de tu agenda</h2>
+      <ul class="resumen" id="resumen"></ul>
+    </section>
+    <p><a class="boton" href="agregar.html">Registrar una tarea</a></p>
+  </main>
+  <footer>
+    <p>Proyecto de medio ciclo - Desarrollo basado en plataformas - UTM</p>
+  </footer>
+  <script src="js/almacen.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>
